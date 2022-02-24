@@ -49,6 +49,7 @@ export const SignInBtn = styled(LinkR)`
             opacity:0.8;
         }
     }
+    
 `
 
 export const SignInWrap = styled.div`
@@ -63,7 +64,7 @@ export const SignInWrap = styled.div`
     border-radius:50px;
     margin-left: 24px;
     @media screen and (max-width:768px){
-        margin-left: 0px;
+        margin-left: 12px;
     }
     @media screen and (max-width:576px){
         margin: 12px 0;
@@ -72,8 +73,11 @@ export const SignInWrap = styled.div`
         padding-bottom: 6px;
         background: #F53855;
     }
-    @media screen and (max-width:768px) and (min-width:576px){
+    @media screen and (width:576px){
+        display:none;   
     }
+
+    
 `
 
 export const SearchWrap = styled.div`
@@ -92,10 +96,15 @@ export const InputSearch = styled.input`
     color:#747474;
 `
 
-export const FanpageWrap =  styled.div`
-    padding: 7px;
+export const FanpageWrap = styled.div`
+    line-height: 35px;
 `
 
 export const FanpageLink = styled.a`
     text-decoration: none;
+    display:block;
+    width:100%;
+    height: 100%;
+    padding:7px 0;
+
 `
