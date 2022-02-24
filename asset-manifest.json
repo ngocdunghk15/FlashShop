@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/FlashShop/static/css/main.91723684.chunk.css",
+    "main.js": "/FlashShop/static/js/main.2b1a890b.chunk.js",
+    "main.js.map": "/FlashShop/static/js/main.2b1a890b.chunk.js.map",
+    "runtime-main.js": "/FlashShop/static/js/runtime-main.f5f4e70d.js",
+    "runtime-main.js.map": "/FlashShop/static/js/runtime-main.f5f4e70d.js.map",
+    "static/css/2.a75f5a2c.chunk.css": "/FlashShop/static/css/2.a75f5a2c.chunk.css",
+    "static/js/2.b8f22695.chunk.js": "/FlashShop/static/js/2.b8f22695.chunk.js",
+    "static/js/2.b8f22695.chunk.js.map": "/FlashShop/static/js/2.b8f22695.chunk.js.map",
+    "static/js/3.64bea3af.chunk.js": "/FlashShop/static/js/3.64bea3af.chunk.js",
+    "static/js/3.64bea3af.chunk.js.map": "/FlashShop/static/js/3.64bea3af.chunk.js.map",
+    "index.html": "/FlashShop/index.html",
+    "service-worker.js": "/FlashShop/service-worker.js",
+    "service-worker.js.map": "/FlashShop/service-worker.js.map",
+    "static/css/2.a75f5a2c.chunk.css.map": "/FlashShop/static/css/2.a75f5a2c.chunk.css.map",
+    "static/css/main.91723684.chunk.css.map": "/FlashShop/static/css/main.91723684.chunk.css.map",
+    "static/js/2.b8f22695.chunk.js.LICENSE.txt": "/FlashShop/static/js/2.b8f22695.chunk.js.LICENSE.txt",
+    "static/media/brand-logo.png": "/FlashShop/static/media/brand-logo.f75b4672.png",
+    "static/media/slider-img.png": "/FlashShop/static/media/slider-img.dcd337e3.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f5f4e70d.js",
+    "static/css/2.a75f5a2c.chunk.css",
+    "static/js/2.b8f22695.chunk.js",
+    "static/css/main.91723684.chunk.css",
+    "static/js/main.2b1a890b.chunk.js"
+  ]
+}
