@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
+import { Link as LinkS} from 'react-scroll'
 export const LogoBrandWrap = styled.div`
     display:flex;
     align-items:center;
@@ -105,6 +106,12 @@ export const FanpageLink = styled.a`
     display:block;
     width:100%;
     height: 100%;
-    padding:7px 0;
+    padding:8px;
 
+`
+
+export const NavServices = styled(LinkS)`
+    text-decoration: none;
+    cursor: pointer;
+    padding:8px;
 `

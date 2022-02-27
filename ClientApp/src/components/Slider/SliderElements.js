@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
 export const SliderContainer = styled.div`
     width:100%;
-    height:800px;
+    height:auto;
     position:relative;
 `
 export const SliderWrapper = styled.div`
@@ -12,6 +12,7 @@ export const SliderWrapper = styled.div`
     position:relative;
     justify-content: center;
     padding-top: 128px;
+    flex-wrap: wrap;
     @media screen and (max-width:992px){
         flex-wrap: wrap;
     }
@@ -103,9 +104,87 @@ export const SliderBtnWrap = styled.div`
     display: flex;
     width: 250px;
     background: #F53838;
+    margin-bottom: 16px;
     border-radius:10px;
     transition: all 0.2s ease-in-out;
     &:hover{
         opacity: 0.8;   
     }
+`
+
+export const SliderInfoWrap = styled.div`
+    display: flex;
+    width:80%;
+    margin:84px auto;
+    height: 200px;
+    background: linear-gradient(to bottom, #FAF8F8,#fff);
+    box-shadow: 12px 16px 12px 1px #EDEDED;
+    border-radius:12px;
+    @media screen and (max-width:992px){
+        height:360px;
+    }
+`
+
+export const SliderInfoList = styled.ul`
+    margin:0;
+    padding:0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width:992px){
+        flex-wrap: wrap;
+    }
+`
+
+export const SliderInfoItemWrap = styled.div`
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    width: 33.33%;
+    @media screen and (max-width:992px){
+        width:100%;
+    }
+`
+
+export const SliderInfoItem = styled.li`
+    display: flex;
+    list-style: none;
+    padding:auto;
+    align-items:center;
+    @media screen and (max-width:992px){
+        min-width:200px;
+        margin-left:auto;
+        margin-right: auto;
+    }
+`
+
+export const SliderInfoImg = styled.img`
+    width: 52px;
+    height: 52px;
+    margin-right:20px;
+`
+
+export const SliderInfoTextWrap = styled.div`
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width:992px){
+        flex-direction: row;
+        align-items: center;
+    }
+`
+
+export const SliderInfoData = styled.span`
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+`
+
+export const SliderInfoType = styled.p`
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-left: 8px;
 `

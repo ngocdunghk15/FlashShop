@@ -9,7 +9,16 @@ import {
     SliderBtn,
     SliderImgWrap,
     SliderImg,
-    SliderBtnWrap
+    SliderBtnWrap,
+    SliderInfoWrap,
+    SliderInfoList,
+    SliderInfoItemWrap,
+    SliderInfoItem,
+    SliderInfoImg,
+    SliderInfoTextWrap,
+    SliderInfoData,
+    SliderInfoType
+
 } from './SliderElements'
 const Slider = () => {
     return (
@@ -17,7 +26,7 @@ const Slider = () => {
             <SliderWrapper>
                 <SliderTextWrap>
                     <SliderH1>
-                        Want anything to be easy with 
+                        Want anything to be easy with
                         <SLiderH1Strong>
                             FLShop.
                         </SLiderH1Strong>
@@ -32,8 +41,51 @@ const Slider = () => {
                     </SliderBtnWrap>
                 </SliderTextWrap>
                 <SliderImgWrap>
-                    <SliderImg src={require('../../images/slider-img.png').default}/>
+                    <SliderImg src={require('../../images/slider-bgr.svg').default} />
                 </SliderImgWrap>
+                <SliderInfoWrap>
+                    <SliderInfoList>
+                        <SliderInfoItemWrap>
+                            <SliderInfoItem>
+                                <SliderInfoImg src={require('../../images/user.png').default} />
+                                <SliderInfoTextWrap>
+                                    <SliderInfoData>
+                                        90+
+                                    </SliderInfoData>
+                                    <SliderInfoType>
+                                        Users
+                                    </SliderInfoType>
+                                </SliderInfoTextWrap>
+                            </SliderInfoItem>
+                        </SliderInfoItemWrap>
+                        <SliderInfoItemWrap>
+                            <SliderInfoItem>
+                                <SliderInfoImg src={require('../../images/location.png').default} />
+                                <SliderInfoTextWrap>
+                                    <SliderInfoData>
+                                        5+
+                                    </SliderInfoData>
+                                    <SliderInfoType>
+                                        Locations
+                                    </SliderInfoType>
+                                </SliderInfoTextWrap>
+                            </SliderInfoItem>
+                        </SliderInfoItemWrap>
+                        <SliderInfoItemWrap>
+                            <SliderInfoItem>
+                                <SliderInfoImg src={require('../../images/server.png').default} />
+                                <SliderInfoTextWrap>
+                                    <SliderInfoData>
+                                        12+
+                                    </SliderInfoData>
+                                    <SliderInfoType>
+                                        Standard
+                                    </SliderInfoType>
+                                </SliderInfoTextWrap>
+                            </SliderInfoItem>
+                        </SliderInfoItemWrap>
+                    </SliderInfoList>
+                </SliderInfoWrap>
             </SliderWrapper>
         </SliderContainer>
     )

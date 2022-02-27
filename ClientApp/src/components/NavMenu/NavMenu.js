@@ -12,7 +12,8 @@ import {
   SearchWrap,
   InputSearch,
   FanpageWrap,
-  FanpageLink
+  FanpageLink,
+  NavServices
 } from './NavMenuElements';
 
 export class NavMenu extends Component {
@@ -36,7 +37,7 @@ export class NavMenu extends Component {
 
   render() {
     return (
-      <header>
+      <header className="header">
         <Navbar className="navbar-expand-sm navbar-toggleable-sm " light>
           <Container>
             <NavbarBrand tag={Link} to="/">
@@ -62,13 +63,13 @@ export class NavMenu extends Component {
                 }}> 
                   <NavLink tag={Link} className="text-dark" to="/products">Products</NavLink>
                 </NavItem>
-                <NavItem className="nav-item sub-nav" onClick={()=>{
+                <li className="nav-item sub-nav" onClick={()=>{
                   if(window.outerWidth<="576"){
                     this.toggleNavbar()
                   }
                 }}>
-                  <NavLink tag={Link} className="text-dark" to="/products">Services</NavLink>
-                </NavItem >
+                  <NavServices  className="text-dark" to="incentives" smooth={true} duration={1000} spy={true} exact='true' offset={-91}>Incentives</NavServices>
+                </li>
                 <FanpageWrap className="nav-item" onClick={()=>{
                   if(window.outerWidth<="576"){
                     this.toggleNavbar()
