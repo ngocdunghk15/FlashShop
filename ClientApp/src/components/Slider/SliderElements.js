@@ -4,10 +4,12 @@ export const SliderContainer = styled.div`
     width:100%;
     height:auto;
     position:relative;
+    background:#fff;
 `
 export const SliderWrapper = styled.div`
-    width:100%;
+    width:86%;
     height:100%;
+    margin:auto;
     display: flex;
     position:relative;
     justify-content: center;

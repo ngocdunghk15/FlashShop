@@ -9,7 +9,7 @@ export class Layout extends Component {
     return (
       <div>
         <NavMenu />
-        <Container style={{paddingTop:'91px'}}>
+        <Container style={{paddingTop:'91px',maxWidth:'100vw',paddingLeft:'0px',paddingRight:'0px'}}>
           {this.props.children}
         </Container>
       </div>

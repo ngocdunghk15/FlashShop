@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const ContentContainer = styled.div`
     padding-top:124px;
+    padding-bottom:124px;
     width: 100%;
-    height:800px;
-    margin:auto;
+    height:auto;
     position:relative;
     background:#fff;
     @media screen and (max-width:992px){
@@ -13,8 +13,9 @@ export const ContentContainer = styled.div`
 `
 
 export const ContentWrapper = styled.div`
-    width:100%;
+    width:86%;
     height:100%;
+    margin:auto;
     display:flex;
     @media screen and (max-width:992px){
         flex-wrap: wrap;
@@ -65,6 +66,10 @@ export const ContentTextPara = styled.p`
     font-weight: 400;  
     color:#4F5665;
     margin-bottom: 20px;
+    @media screen and (max-width:992px) {
+        margin-top:16px;
+        margin-bottom:36px;
+    }
 `
 
 export const ContentList = styled.ul`
