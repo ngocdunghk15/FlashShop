@@ -113,5 +113,6 @@ export const FanpageLink = styled.a`
 export const NavServices = styled(LinkS)`
     text-decoration: none;
     cursor: pointer;
+    display:block;
     padding:8px;
 `

@@ -14,7 +14,6 @@ import {
 } from './MemberItemElements'
 
 const MemberItem = ({ colorTheme, imgPath, typeMember, incentiveArray, minPoint }) => {
-  console.log(incentiveArray);
   return (
     <MemberContainer colorTheme={colorTheme}>
       <MemberWrapper>

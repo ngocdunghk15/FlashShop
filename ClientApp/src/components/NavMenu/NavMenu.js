@@ -49,43 +49,43 @@ export class NavMenu extends Component {
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse className="d-sm-inline-flex flex-center" isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow navigation">
-                <NavItem className="nav-item" onClick={()=>{
-                  if(window.outerWidth<="576"){
+                <NavItem className="nav-item" onClick={() => {
+                  if (window.outerWidth <= "591") {
                     this.toggleNavbar()
                   }
                 }}>
                   <NavLink tag={Link} className="text-dark" to="/">About</NavLink>
                 </NavItem>
-                <NavItem  className="nav-item" onClick={()=>{
-                  if(window.outerWidth<="576"){
-                    this.toggleNavbar()
-                  }
-                }}> 
-                  <NavLink tag={Link} className="text-dark" to="/products">Products</NavLink>
-                </NavItem>
-                <li className="nav-item sub-nav" onClick={()=>{
-                  if(window.outerWidth<="576"){
+                <NavItem className="nav-item" onClick={() => {
+                  if (window.outerWidth <= "591") {
                     this.toggleNavbar()
                   }
                 }}>
-                  <NavServices  className="text-dark" to="incentives" smooth={true} duration={1000} spy={true} exact='true' offset={-91}>Incentives</NavServices>
-                </li>
-                <FanpageWrap className="nav-item" onClick={()=>{
-                  if(window.outerWidth<="576"){
+                  <NavLink tag={Link} className="text-dark" to="/products">Products</NavLink>
+                </NavItem>
+                <NavItem className="nav-item sub-nav" >
+                  <NavServices onClick={() => {
+                    if (window.outerWidth <= "591") {
+                      this.toggleNavbar()
+                    }
+                  }} className="text-dark" to="incentives" smooth={true} duration={1000} spy={true} exact='true' offset={-91}>Incentives</NavServices>
+                </NavItem>
+                <FanpageWrap className="nav-item" onClick={() => {
+                  if (window.outerWidth <= "591") {
                     this.toggleNavbar()
                   }
                 }}>
                   <FanpageLink target="_blank" href="https://www.facebook.com/UET-League-Of-Legends-Club-105847131898074" className="text-dark">Fanpage</FanpageLink>
                 </FanpageWrap>
-                <NavItem className="nav-item sub-nav" onClick={()=>{
-                  if(window.outerWidth<="576"){
+                <NavItem className="nav-item sub-nav" onClick={() => {
+                  if (window.outerWidth <= "591") {
                     this.toggleNavbar()
                   }
                 }}>
                   <NavLink tag={Link} className="text-dark" to="/products">Help</NavLink>
                 </NavItem>
-                <SignInWrap className="none-list-style" onClick={()=>{
-                  if(window.outerWidth<="576"){
+                <SignInWrap className="none-list-style" onClick={() => {
+                  if (window.outerWidth <= "591") {
                     this.toggleNavbar()
                   }
                 }}>

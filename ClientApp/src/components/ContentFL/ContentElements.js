@@ -90,14 +90,21 @@ export const ContentList = styled.ul`
 export const ContentItem = styled.li`
     display:flex;
     margin-bottom: 14px;
+    align-items: center;
     @media screen and (max-width:992px){
         display:inline-flex;
         width: 40%;
+    }
+    @media screen and (max-width:669px){
+        display:inline-flex;
+        width: 60%;
     }
 `
 
 export const ContentIcon = styled.img`
     margin-right: 10px;
+    width: 24px;
+    height: 24px;
 `
 
 export const ContentItemText = styled.span`

@@ -12,7 +12,7 @@ export const MemberContainer = styled.div`
             case 'gold':
                 return '#F8DE7E';
             case 'platium':
-                return '#D1F0EB';
+                return '#B1E0D8';
             default:
                 return '#fff';
         }
@@ -91,7 +91,7 @@ export const MemberMinPoint = styled.h3`
             case 'gold':
                 return '#F8DE7E';
             case 'platium':
-                return '#D1F0EB';
+                return '#B1E0D8';
             default:
                 return '#fff';
         }
@@ -110,7 +110,19 @@ export const MemberSeeMore = styled.a`
             case 'gold':
                 return '#F8DE7E';
             case 'platium':
-                return '#D1F0EB';
+                return '#B1E0D8';
+            default:
+                return '#fff';
+        }
+    }};
+    box-shadow: 1px 2px 8px 2px ${({ colorTheme }) => {
+        switch (colorTheme) {
+            case 'silver':
+                return '#F4F4F4';
+            case 'gold':
+                return '#F4F4F4';
+            case 'platium':
+                return '#F4F4F4';
             default:
                 return '#fff';
         }

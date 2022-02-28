@@ -36,6 +36,6 @@ export const memberPlatium = {
     ],
     'minPoint': '3000',
     'imgPath': require('../../../images/platium-member.svg').default,
-    'typeMember': 'Platium',
+    'typeMember': 'Platinum',
     'colorTheme': 'platium'
 }

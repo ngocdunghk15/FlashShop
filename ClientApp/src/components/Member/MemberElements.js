@@ -63,5 +63,20 @@ export const MemberItemWrapper = styled.li`
         margin: 0 48px;
         margin-bottom:56px;
     }
+    @media screen and (max-width:992px) {
+        width: 56%;
+        margin: 0 48px;
+        margin-bottom:56px;
+    }
+    @media screen and (max-width:768px) {
+        width: 68%;
+        margin: 0 48px;
+        margin-bottom:56px;
+    }
+    @media screen and (max-width:576px) {
+        width: 74%;
+        margin: 0 48px;
+        margin-bottom:56px;
+    }
 `
 
