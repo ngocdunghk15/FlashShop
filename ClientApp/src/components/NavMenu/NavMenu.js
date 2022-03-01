@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { Link as LinkS } from 'react-scroll'
 import './NavMenu.css';
 import {
   LogoBrandWrap,

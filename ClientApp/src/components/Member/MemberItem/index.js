@@ -37,7 +37,7 @@ const MemberItem = ({ colorTheme, imgPath, typeMember, incentiveArray, minPoint 
           {`Upper ${minPoint} points`}
         </MemberMinPoint>
         <MemberSeeMore colorTheme={colorTheme}>
-          {`See more >`}
+          {`See more`}
         </MemberSeeMore>
       </MemberWrapper>
     </MemberContainer>
