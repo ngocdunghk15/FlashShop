@@ -77,12 +77,12 @@ export class NavMenu extends Component {
                 }}>
                   <FanpageLink target="_blank" href="https://www.facebook.com/UET-League-Of-Legends-Club-105847131898074" className="text-dark">Fanpage</FanpageLink>
                 </FanpageWrap>
-                <NavItem className="nav-item sub-nav" onClick={() => {
-                  if (window.outerWidth <= "591") {
-                    this.toggleNavbar()
-                  }
-                }}>
-                  <NavLink tag={Link} className="text-dark" to="/products">Help</NavLink>
+                <NavItem className="nav-item sub-nav" >
+                  <NavServices onClick={() => {
+                    if (window.outerWidth <= "591") {
+                      this.toggleNavbar()
+                    }
+                  }} className="text-dark" to="member" smooth={true} duration={1000} spy={true} exact='true' offset={-91}>Member</NavServices>
                 </NavItem>
                 <SignInWrap className="none-list-style" onClick={() => {
                   if (window.outerWidth <= "591") {

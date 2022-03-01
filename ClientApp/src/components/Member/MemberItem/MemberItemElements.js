@@ -100,6 +100,7 @@ export const MemberMinPoint = styled.h3`
 
 export const MemberSeeMore = styled.a`
     text-decoration: none;
+    font-weight: 500;
     color:#fff;
     padding:13px 46px;
     border-radius:50px;
@@ -115,14 +116,14 @@ export const MemberSeeMore = styled.a`
                 return '#fff';
         }
     }};
-    box-shadow: 1px 2px 8px 2px ${({ colorTheme }) => {
+    box-shadow: inset 0px 0px 6px 4px ${({ colorTheme }) => {
         switch (colorTheme) {
             case 'silver':
-                return '#F4F4F4';
+                return '#C1C1C1';
             case 'gold':
-                return '#F4F4F4';
+                return '#DBC36E';
             case 'platium':
-                return '#F4F4F4';
+                return '#9CCDC5';
             default:
                 return '#fff';
         }

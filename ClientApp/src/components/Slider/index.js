@@ -36,7 +36,7 @@ const Slider = () => {
                     </SliderPara>
                     <SliderBtnWrap>
                         <SliderBtn to="/products">
-                            Let's move on Shop
+                            Let's move into Shop
                         </SliderBtn>
                     </SliderBtnWrap>
                 </SliderTextWrap>

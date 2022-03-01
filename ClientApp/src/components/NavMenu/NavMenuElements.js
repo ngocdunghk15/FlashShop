@@ -58,21 +58,22 @@ export const SignInWrap = styled.div`
     background-color: #fff;
     width:86px;
     height:36px;
-    border:#F53855 solid 1px;
     display:flex;
     justify-content: center;
     align-items: center;
     border-radius:50px;
     margin-left: 24px;
+    box-shadow: inset 0px 0px 6px 1px #DCB9B9;
     @media screen and (max-width:768px){
         margin-left: 12px;
     }
     @media screen and (max-width:576px){
         margin: 12px 0;
-        width: 128px;
-        padding-top:6px;
-        padding-bottom: 6px;
+        width: 144px;
+        height:48px;
+        padding:12px 24px;
         background: #F53855;
+    box-shadow: inset 0px 0px 6px 2px #B42D41;
     }
     @media screen and (width:576px){
         display:none;   
