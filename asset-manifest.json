@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/FlashShop/static/css/main.cd2fe8d6.chunk.css",
-    "main.js": "/FlashShop/static/js/main.2c51ef46.chunk.js",
-    "main.js.map": "/FlashShop/static/js/main.2c51ef46.chunk.js.map",
+    "main.js": "/FlashShop/static/js/main.506f406a.chunk.js",
+    "main.js.map": "/FlashShop/static/js/main.506f406a.chunk.js.map",
     "runtime-main.js": "/FlashShop/static/js/runtime-main.e71d8e95.js",
     "runtime-main.js.map": "/FlashShop/static/js/runtime-main.e71d8e95.js.map",
     "static/css/2.459240e5.chunk.css": "/FlashShop/static/css/2.459240e5.chunk.css",
@@ -36,6 +36,6 @@
     "static/css/2.459240e5.chunk.css",
     "static/js/2.de6413c6.chunk.js",
     "static/css/main.cd2fe8d6.chunk.css",
-    "static/js/main.2c51ef46.chunk.js"
+    "static/js/main.506f406a.chunk.js"
   ]
 }
