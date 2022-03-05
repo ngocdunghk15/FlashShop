@@ -75,6 +75,7 @@ export const MemberIncentives = styled.span`
     font-weight: 400;
     line-height: 30px;
     text-align: left;
+    color:#4F5665;
 `
 
 export const MemberMinPoint = styled.h3`

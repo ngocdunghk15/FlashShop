@@ -10,7 +10,8 @@ import {
     AdsItemWrapText,
     AdsItemTitle,
     AdsItemText,
-
+    AdsSponsorsWrapper,
+    AdsSponsorsImg
 } from './AdsElements'
 
 const Advertisement = () => {
@@ -47,6 +48,9 @@ const Advertisement = () => {
                         </AdsItemWrapText>
                     </AdsItemWrapper>
                 </AdsListImg>
+                <AdsSponsorsWrapper>
+                    <AdsSponsorsImg src={require('../../images/sponsored.svg').default} />
+                </AdsSponsorsWrapper>
             </AdsWrapper>
         </AdsContainer>
     )

@@ -28,7 +28,7 @@ const Slider = () => {
                     <SliderH1>
                         Want anything to be easy with
                         <SLiderH1Strong>
-                            FLShop.
+                            FLShop
                         </SLiderH1Strong>
                     </SliderH1>
                     <SliderPara>

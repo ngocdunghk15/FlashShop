@@ -1,0 +1,68 @@
+.owl-dot.active span {
+  background: #f53838 !important;
+  font-size: 24px;
+  width: 45px;
+  display: block;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+  width: 45px;
+}
+.owl-theme .owl-dots .owl-dot {
+  zoom: 1.4;
+}
+
+.owl-carousel {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.owl-dots{
+  display: flex !important;
+  align-items: center !important;
+}
+
+.owl-stage-outer{
+  margin-bottom:80px;
+}
+
+.owl-nav {
+  margin-top:0px !important;
+  display: flex;
+}
+
+.owl-prev {
+  background: #fff !important;
+  width: 60px;
+  height: 60px;
+  border-radius: 100% !important;
+  border: 2px solid #f53838 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.owl-prev span {
+  color: #f53838 !important;
+  font-size: 32px;
+}
+
+.owl-next {
+  background: #f53838 !important;
+  width: 60px;
+  height: 60px;
+  border-radius: 100% !important;
+  border: 2px solid #f53838 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.owl-next span {
+  color: #fff !important;
+  font-size: 32px;
+}
+
+.owl-carousel .owl-stage{
+  height: 240px !important;
+}

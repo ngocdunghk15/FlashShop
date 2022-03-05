@@ -12,7 +12,7 @@ import {
   InputSearch,
   FanpageWrap,
   FanpageLink,
-  NavServices
+  NavServices,
 } from './NavMenuElements';
 
 export class NavMenu extends Component {
@@ -63,11 +63,13 @@ export class NavMenu extends Component {
                   <NavLink tag={Link} className="text-dark" to="/products">Products</NavLink>
                 </NavItem>
                 <NavItem className="nav-item sub-nav" >
-                  <NavServices onClick={() => {
-                    if (window.outerWidth <= "591") {
-                      this.toggleNavbar()
-                    }
-                  }} className="text-dark" to="incentives" smooth={true} duration={1000} spy={true} exact='true' offset={-91}>Incentives</NavServices>
+                  <NavServices
+                    onClick={() => {
+                      if (window.outerWidth <= "591") {
+                        this.toggleNavbar()
+                      }
+                    }} className="text-dark"
+                    to='incentives' smooth={true} duration={500} spy={true} exact='true' offset={-91}>Incentives</NavServices>
                 </NavItem>
                 <FanpageWrap className="nav-item" onClick={() => {
                   if (window.outerWidth <= "591") {

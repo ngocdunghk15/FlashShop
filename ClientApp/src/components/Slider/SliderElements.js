@@ -75,6 +75,7 @@ export const SLiderH1Strong = styled.span`
     font-weight: 900;
     margin-left: 14px;
     letter-spacing: 0.8px;
+    color: #f53838;
 `
 
 export const SliderPara = styled.p`

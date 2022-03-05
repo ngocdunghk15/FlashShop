@@ -31,6 +31,7 @@ export const AdsPara = styled.p`
     text-align: center;
     margin-top: 70px;
     margin-bottom: 74px;
+    color:#4F5665;
 `
 
 export const AdsListImg = styled.ul`
@@ -92,4 +93,16 @@ export const AdsItemText = styled.p`
     @media screen and (max-width:768px){
         font-size: 16px;
     }
+`
+
+export const AdsSponsorsWrapper = styled.div`
+    width:86%;
+    height:auto;
+    margin:auto;
+    margin-top:74px;
+`
+
+export const AdsSponsorsImg = styled.img`
+    max-width:100%;
+    height:auto;
 `
