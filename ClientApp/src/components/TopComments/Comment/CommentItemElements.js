@@ -5,7 +5,7 @@ export const CommentContainer = styled.div`
     padding:30px;
     min-height: 240px;
     border-radius:10px;
-    box-shadow:inset 0px 0px 1px 1px #DDDDDD ;
+    box-shadow:inset 0px 0px 1px 2px #DDDDDD ;
 `
 
 
