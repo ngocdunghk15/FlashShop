@@ -8,6 +8,7 @@ export const SubscribeContainer = styled.div`
     align-items:center;
     margin:auto;
     box-shadow: 0px 0px 128px 1px #F0F0F0;
+    margin-bottom:80px;
     @media screen and (max-width:1160px){
         width:74%;
     }

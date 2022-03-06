@@ -5,6 +5,7 @@ import Member from '../components/Member'
 import Advertisement from '../components/Advertisement'
 import TopComments from '../components/TopComments'
 import Subscribe from '../components/Subscribe'
+import Footer from '../components/Footer'
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <Advertisement />
       <TopComments />
       <Subscribe />
+      <Footer />
     </>
   )
 }
