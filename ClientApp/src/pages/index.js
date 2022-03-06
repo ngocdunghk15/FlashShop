@@ -4,6 +4,7 @@ import Slider from '../components/Slider'
 import Member from '../components/Member'
 import Advertisement from '../components/Advertisement'
 import TopComments from '../components/TopComments'
+import Subscribe from '../components/Subscribe'
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Member />
       <Advertisement />
       <TopComments />
+      <Subscribe />
     </>
   )
 }
