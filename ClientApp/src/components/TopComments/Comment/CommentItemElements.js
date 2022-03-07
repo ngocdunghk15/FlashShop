@@ -30,6 +30,11 @@ export const CommentContent = styled.div`
     text-align: left;
     color:#0B132A;
     margin-top:20px;
+    height:90px;
+    overflow: hidden;
+    display:-webkit-box;
+    -webkit-box-orient:vertical; 
+    -webkit-line-clamp:3;
 `
 
 export const CommentInfoLeft = styled.div`

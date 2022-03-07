@@ -1,0 +1,40 @@
+.categoryContainer{
+    width:20%;
+    height:auto;
+}
+
+.filter-list{
+    padding-left: 8px;
+    list-style-type:none;
+}
+
+.category__header{
+    padding:24px 8px;
+    display:flex;
+    align-items:center;
+    border-bottom: 1px solid #ccc;
+}
+
+.category__title{
+    font-size: 20px;
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+.filter-type{
+    display:block;
+    padding: 12px 0px;
+    font-size: 18px;
+}
+
+.filter-item{
+    padding:4px 0;
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+
+.filter-item input{
+    margin-right:6px;
+    transform:translateY(1px)
+}
