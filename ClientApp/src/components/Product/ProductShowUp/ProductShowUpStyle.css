@@ -44,6 +44,7 @@
   width: 60%;
   box-shadow: inset 0px 0px 16px 1px #f0f0f0;
   height: 100%;
+  overflow-y: scroll;
 }
 
 .close-icon--wrapper {
@@ -124,12 +125,8 @@
 .show-up__description {
   margin: 8px 12px;
   line-height: 24px;
-  height: 96px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: block;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  min-height: 96px;
+  height: auto;
 }
 
 .show-up__description span {

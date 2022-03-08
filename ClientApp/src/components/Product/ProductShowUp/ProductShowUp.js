@@ -31,7 +31,6 @@ const ProductShowUp = ({ id, image, title, description, category, rating, price,
     const handleClickIncrease = () => {
         setQuantity(quantity => quantity + 1)
     }
-
     // Handle Add To Cart 
     const handleAdd = () => {
         alert('Add To Your Cart!')
@@ -39,7 +38,7 @@ const ProductShowUp = ({ id, image, title, description, category, rating, price,
     // Handle Buy Now
     const handleBuy = () => {
         const emailSignIn = 'https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin';
-        window.open(emailSignIn,"_blank","toolbar=yes,scrollbars=yes,resizable=yes")
+        window.open(emailSignIn, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes")
     }
     return (
         <div className="showup-container" >
