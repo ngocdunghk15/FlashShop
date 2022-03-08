@@ -35,6 +35,11 @@
 }
 
 .filter-item input{
-    margin-right:6px;
+    cursor: pointer;
     transform:translateY(1px)
+}
+
+.filter-item label{
+    cursor: pointer;
+    padding-left:6px;
 }

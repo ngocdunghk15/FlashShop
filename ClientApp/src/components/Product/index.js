@@ -1,19 +1,22 @@
 import React from 'react'
 import { FcShipped } from 'react-icons/fc'
-
+import { useState } from 'react'
 import './ProductStyle.css'
+import ProductShowUp from './ProductShowUp/ProductShowUp'
 const Product = ({ id, image, title, description, category, rating, price }) => {
   const productID = `product-${id}`
+  const dataResponse = { id, image, title, description, category, rating, price }
   const handleClick = (e) => {
     console.log(e.target, productID)
+    setShowUp(prevState => !prevState)
   }
+  // State of show-product
+  const [showUp, setShowUp] = useState(false)
   return (
     <div id={`product-${id}`} onClick={handleClick} className="product-container">
       <div className="product-wrapper">
         <div className="product-img--wrapper">
-          <img style={{
-            
-          }} src={image} />
+          <img src={image} />
         </div>
         <div className="product-info--wrapper">
           <div className="product-title--wrapper">
@@ -34,6 +37,7 @@ const Product = ({ id, image, title, description, category, rating, price }) => 
           </div>
         </div>
       </div>
+      {showUp && <ProductShowUp handleClick={handleClick} {...dataResponse} />}
     </div>
   )
 }

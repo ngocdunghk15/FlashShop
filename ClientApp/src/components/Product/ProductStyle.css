@@ -5,6 +5,7 @@
 }
 
 .product-wrapper {
+  cursor: pointer;
 }
 
 .product-img--wrapper {
