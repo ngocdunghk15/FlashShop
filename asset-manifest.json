@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/FlashShop/static/css/main.7b0d434d.chunk.css",
+    "main.css": "/FlashShop/static/css/main.1e65ec7e.chunk.css",
     "main.js": "/FlashShop/static/js/main.f194d0ef.chunk.js",
     "main.js.map": "/FlashShop/static/js/main.f194d0ef.chunk.js.map",
     "runtime-main.js": "/FlashShop/static/js/runtime-main.c935c876.js",
@@ -14,7 +14,7 @@
     "service-worker.js": "/FlashShop/service-worker.js",
     "service-worker.js.map": "/FlashShop/service-worker.js.map",
     "static/css/2.459240e5.chunk.css.map": "/FlashShop/static/css/2.459240e5.chunk.css.map",
-    "static/css/main.7b0d434d.chunk.css.map": "/FlashShop/static/css/main.7b0d434d.chunk.css.map",
+    "static/css/main.1e65ec7e.chunk.css.map": "/FlashShop/static/css/main.1e65ec7e.chunk.css.map",
     "static/js/2.a60e8330.chunk.js.LICENSE.txt": "/FlashShop/static/js/2.a60e8330.chunk.js.LICENSE.txt",
     "static/media/ads-red.svg": "/FlashShop/static/media/ads-red.cba05583.svg",
     "static/media/ads-white.svg": "/FlashShop/static/media/ads-white.cd0603b8.svg",
@@ -35,7 +35,7 @@
     "static/js/runtime-main.c935c876.js",
     "static/css/2.459240e5.chunk.css",
     "static/js/2.a60e8330.chunk.js",
-    "static/css/main.7b0d434d.chunk.css",
+    "static/css/main.1e65ec7e.chunk.css",
     "static/js/main.f194d0ef.chunk.js"
   ]
 }
