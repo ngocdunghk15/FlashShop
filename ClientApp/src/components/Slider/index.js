@@ -47,7 +47,7 @@ const Slider = () => {
                     <SliderInfoList>
                         <SliderInfoItemWrap>
                             <SliderInfoItem>
-                                <SliderInfoImg src={require('../../images/user.png').default} />
+                                <SliderInfoImg src={require('../../images/user.svg').default} />
                                 <SliderInfoTextWrap>
                                     <SliderInfoData>
                                         90+
@@ -60,7 +60,7 @@ const Slider = () => {
                         </SliderInfoItemWrap>
                         <SliderInfoItemWrap>
                             <SliderInfoItem>
-                                <SliderInfoImg src={require('../../images/location.png').default} />
+                                <SliderInfoImg src={require('../../images/location.svg').default} />
                                 <SliderInfoTextWrap>
                                     <SliderInfoData>
                                         5+
@@ -73,7 +73,7 @@ const Slider = () => {
                         </SliderInfoItemWrap>
                         <SliderInfoItemWrap>
                             <SliderInfoItem>
-                                <SliderInfoImg src={require('../../images/server.png').default} />
+                                <SliderInfoImg src={require('../../images/erver.svg').default} />
                                 <SliderInfoTextWrap>
                                     <SliderInfoData>
                                         12+

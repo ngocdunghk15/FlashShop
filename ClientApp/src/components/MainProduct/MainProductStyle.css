@@ -3,10 +3,116 @@
   height: auto;
 }
 
-.product-col {
-  padding-left:0px !important;
-  padding-right:0px !important;
-  margin-bottom: 12px;
-  margin-top:12px;
+.active-toolbar {
+  background-color: #d0011b;
+  color: #fff;
+}
+
+.main-product__toolbar {
+  height: auto;
+  padding: 8px 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
   border-radius: 8px;
+  margin: 24px 18px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar-left--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-col {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+}
+
+.toolbar-btn {
+  padding: 4px 20px;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  margin-right: 12px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.toolbar-right--wrapper {
+  padding: 4px 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.toolbar__cart {
+  margin: 4px 0;
+  font-size: 32px;
+  color: #d0011b;
+}
+
+.cart-storage--wrapper {
+  position: absolute;
+  top: 100%;
+  right: 12px;
+  width: 460px;
+  height: auto;
+  max-height: 432.2px;
+  overflow-y: scroll;
+  min-height: 64px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #cfcfcf;
+  z-index: 1002;
+  transform: scale(0, 0);
+  transition: all 0.2s;
+  transform-origin: top right;
+}
+
+.cart-storage--wrapper::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #cfcfcf;
+  position: absolute;
+  top: 0;
+  right: 6px;
+  -webkit-clip-path: polygon(50% 56%, 0 100%, 100% 100%);
+  clip-path: polygon(50% 56%, 0 100%, 100% 100%);
+  transform: translateY(-100%);
+}
+
+.toolbar-right--wrapper:hover .cart-storage--wrapper {
+  transform: scale(1, 1);
+}
+
+.cart-storage__title {
+  font-size: 16px;
+  color: #cfcfcf;
+}
+
+.check-cart--wrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.check-cart--btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  background: #d0011b;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.check-cart--btn:hover {
+  color: #fff;
+  opacity:0.8;
 }

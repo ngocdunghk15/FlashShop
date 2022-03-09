@@ -1,0 +1,20 @@
+.empty-cart--wrapper{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:64px 0;
+}
+
+.empty-cart--title{
+    font-size: 24px;
+    font-weight: 700;
+    color:#8BC34A;
+    letter-spacing:1.4px;
+    margin-bottom: 12px;
+}
+
+.empty-cart--wrapper img{
+    width:96px;
+    height:auto;
+}

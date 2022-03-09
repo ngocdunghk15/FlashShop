@@ -17,7 +17,7 @@ export const LogoBrand = styled.img`
 `
 
 export const BrandText = styled.h1`
-    color:#F53838 ;
+    color:#d0011b;
     font-weight: 700;
     font-size: 24px;
     opacity: 0.9;
@@ -32,10 +32,10 @@ export const SignInBtn = styled(LinkR)`
     text-decoration: none;
     font-size:16px;
     display:flex;
-    color:#F53855;
+    color:#d0011b;
     font-weight: 700;
     &:hover{
-        color:#F53855;
+        color:#d0011b;
         opacity:0.8;
     }
     width:100%;
@@ -72,7 +72,7 @@ export const SignInWrap = styled.div`
         width: 144px;
         height:48px;
         padding:12px 24px;
-        background: #F53855;
+        background: #d0011b;
     box-shadow: inset 0px 0px 6px 2px #B42D41;
     }
     @media screen and (width:576px){

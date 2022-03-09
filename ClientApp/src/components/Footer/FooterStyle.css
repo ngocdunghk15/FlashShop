@@ -141,6 +141,7 @@
   font-size: 14px;
   font-weight: 900;
   width: 100%;
+  background-color: #b61616;
 }
 
 .footer .footer__col--fourth {
@@ -188,7 +189,7 @@
 }
 
 .brand-name {
-  color: #f53838;
+  color: #b61616;
   font-size: 36px !important;
 }
 

@@ -1,5 +1,5 @@
 .owl-dot.active span {
-  background: #f53838 !important;
+  background: #d0011b !important;
   font-size: 24px;
   width: 45px;
   display: block;
@@ -38,22 +38,22 @@
   width: 60px;
   height: 60px;
   border-radius: 100% !important;
-  border: 2px solid #f53838 !important;
+  border: 2px solid #d0011b !important;
   display: flex !important;
   justify-content: center !important;
 }
 
 .owl-prev span {
-  color: #f53838 !important;
+  color: #d0011b !important;
   font-size: 32px;
 }
 
 .owl-next {
-  background: #f53838 !important;
+  background: #d0011b !important;
   width: 60px;
   height: 60px;
   border-radius: 100% !important;
-  border: 2px solid #f53838 !important;
+  border: 2px solid #d0011b !important;
   display: flex !important;
   justify-content: center !important;
 }

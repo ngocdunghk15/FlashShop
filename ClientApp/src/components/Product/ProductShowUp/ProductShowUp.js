@@ -23,8 +23,8 @@ const ProductShowUp = ({ id, image, title, description, category, rating, price,
     // Handle Descrease Button
     const handleClickDescrease = () => {
         setQuantity(quantity => {
-            if (quantity - 1 < 0) {
-                return 0;
+            if (quantity - 1 < 1) {
+                return 1;
             }
             return quantity - 1;
         })
@@ -93,7 +93,7 @@ const ProductShowUp = ({ id, image, title, description, category, rating, price,
                                 onChange={(e) => {
                                     setQuantity(() => {
                                         if (e.target.value == '') {
-                                            return 0;
+                                            return 1;
                                         }
                                         return parseInt(e.target.value) >= 0 ? parseInt(e.target.value) : -parseInt(e.target.value);
                                     })

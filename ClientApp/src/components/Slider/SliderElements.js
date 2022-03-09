@@ -75,7 +75,7 @@ export const SLiderH1Strong = styled.span`
     font-weight: 900;
     margin-left: 14px;
     letter-spacing: 0.8px;
-    color: #f53838;
+    color: #d0011b;
 `
 
 export const SliderPara = styled.p`
@@ -106,10 +106,10 @@ export const SliderBtn = styled(LinkR)`
 export const SliderBtnWrap = styled.div`
     display: flex;
     width: 256px;
-    background: #F53838;
+    background: #d0011b;
     margin-bottom: 16px;
     border-radius:10px;
-    box-shadow: inset 0px 0px 6px 4px #BE2828;
+    box-shadow: inset 0px 0px 6px 4px #840113;
     transition: all 0.2s ease-in-out;
     &:hover{
         opacity: 0.8;   
@@ -135,7 +135,7 @@ export const SliderInfoList = styled.ul`
     padding:0;
     display: flex;
     align-items: center;
-    box-shadow:inset 0px 0px 28px 1px #F7EDEF;
+    box-shadow:inset 0px 0px 24px 1px #F0F0F0;
     width: 100%;
     height: 100%;
     @media screen and (max-width:992px){

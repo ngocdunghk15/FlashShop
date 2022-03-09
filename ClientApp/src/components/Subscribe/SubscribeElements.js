@@ -59,7 +59,7 @@ export const SubscribePara = styled.p`
 `
 
 export const SubscribeButton = styled(Link)`
-    background:#F53838;
+    background:#d0011b;
     color:#fff;
     outline:none;
     text-decoration:none;
@@ -70,7 +70,7 @@ export const SubscribeButton = styled(Link)`
     line-height: 25px;
     text-align: left;
     border-radius:10px;
-    box-shadow: inset 0px 0px 6px 4px #BE2828;
+    box-shadow: inset 0px 0px 6px 4px #840113;
     transition: all 0.2s ease-in-out;
     &:hover{
         opacity: 0.8;   
