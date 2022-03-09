@@ -7,7 +7,6 @@ const Product = ({ id, image, title, description, category, rating, price }) => 
   const productID = `product-${id}`
   const dataResponse = { id, image, title, description, category, rating, price }
   const handleClick = (e) => {
-    console.log(e.target, productID)
     setShowUp(prevState => !prevState)
   }
   // State of show-product

@@ -3,12 +3,15 @@ import React from 'react'
 import { FcShipped } from 'react-icons/fc'
 import { TiTimesOutline } from 'react-icons/ti'
 import { BsFillCartCheckFill, BsCartPlus } from 'react-icons/bs'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 
 // Internal Import 
 import './ProductShowUpStyle.css'
+import { CartContext } from '../../MainProduct/index'
 
 const ProductShowUp = ({ id, image, title, description, category, rating, price, handleClick }) => {
+    const productInfo = { id, image, title, description, category, rating, price }
+    const handleAddToCart = useContext(CartContext)
     function productClick(e) {
         e.stopPropagation()
     }
@@ -31,10 +34,7 @@ const ProductShowUp = ({ id, image, title, description, category, rating, price,
     const handleClickIncrease = () => {
         setQuantity(quantity => quantity + 1)
     }
-    // Handle Add To Cart 
-    const handleAdd = () => {
-        alert('Add To Your Cart!')
-    }
+
     // Handle Buy Now
     const handleBuy = () => {
         const emailSignIn = 'https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin';
@@ -102,7 +102,9 @@ const ProductShowUp = ({ id, image, title, description, category, rating, price,
                         </div>
                     </div>
                     <div className="show-up__order--wrapper">
-                        <div className="show-up__add--wrapper" onClick={handleAdd}>
+                        <div className="show-up__add--wrapper" onClick={() => {
+                            handleAddToCart(productInfo, quantity)
+                        }}>
                             <BsCartPlus className="add-cart__icon" />
                             <span>Add To Cart</span>
                         </div>
