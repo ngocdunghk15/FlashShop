@@ -20,7 +20,7 @@ const Content = () => {
             <ContentContainer id="incentives">
                 <ContentWrapper>
                     <ContentImgWrap>
-                        <ContentImg src={require('../../images/content-bgr.svg').default} />
+                        <ContentImg loading='lazy' src={require('../../images/content-bgr.svg').default} />
                     </ContentImgWrap>
                     <ContentTextWrap>
                         <ContentTextTitle>
@@ -31,37 +31,37 @@ const Content = () => {
                         </ContentTextPara>
                         <ContentList>
                             <ContentItem>
-                                <ContentIcon src={require('../../images/checked.svg').default} />
+                                <ContentIcon loading='lazy' src={require('../../images/checked.svg').default} />
                                 <ContentItemText>
                                     Powerfull online protection.
                                 </ContentItemText>
                             </ContentItem>
                             <ContentItem>
-                                <ContentIcon src={require('../../images/checked.svg').default} />
+                                <ContentIcon loading='lazy' src={require('../../images/checked.svg').default} />
                                 <ContentItemText>
                                     Everywhere & Everytime.
                                 </ContentItemText>
                             </ContentItem>
                             <ContentItem>
-                                <ContentIcon src={require('../../images/checked.svg').default} />
+                                <ContentIcon loading='lazy' src={require('../../images/checked.svg').default} />
                                 <ContentItemText>
                                     Flash transport.
                                 </ContentItemText>
                             </ContentItem>
                             <ContentItem>
-                                <ContentIcon src={require('../../images/checked.svg').default} />
+                                <ContentIcon loading='lazy' src={require('../../images/checked.svg').default} />
                                 <ContentItemText>
                                     Lots of attractive incentives.
                                 </ContentItemText>
                             </ContentItem>
                             <ContentItem>
-                                <ContentIcon src={require('../../images/checked.svg').default} />
+                                <ContentIcon loading='lazy' src={require('../../images/checked.svg').default} />
                                 <ContentItemText>
                                     No specific time limits.
                                 </ContentItemText>
                             </ContentItem>
                             <ContentItem>
-                                <ContentIcon src={require('../../images/checked.svg').default} />
+                                <ContentIcon loading='lazy' src={require('../../images/checked.svg').default} />
                                 <ContentItemText>
                                     Gifts for vip member.
                                 </ContentItemText>

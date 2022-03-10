@@ -41,13 +41,13 @@ const Slider = () => {
                     </SliderBtnWrap>
                 </SliderTextWrap>
                 <SliderImgWrap>
-                    <SliderImg src={require('../../images/slider-bgr.svg').default} />
+                    <SliderImg loading='lazy' src={require('../../images/slider-bgr.svg').default} />
                 </SliderImgWrap>
                 <SliderInfoWrap>
                     <SliderInfoList>
                         <SliderInfoItemWrap>
                             <SliderInfoItem>
-                                <SliderInfoImg src={require('../../images/user.svg').default} />
+                                <SliderInfoImg loading='lazy' src={require('../../images/user.svg').default} />
                                 <SliderInfoTextWrap>
                                     <SliderInfoData>
                                         90+
@@ -60,7 +60,7 @@ const Slider = () => {
                         </SliderInfoItemWrap>
                         <SliderInfoItemWrap>
                             <SliderInfoItem>
-                                <SliderInfoImg src={require('../../images/location.svg').default} />
+                                <SliderInfoImg loading='lazy' src={require('../../images/location.svg').default} />
                                 <SliderInfoTextWrap>
                                     <SliderInfoData>
                                         5+
@@ -73,7 +73,7 @@ const Slider = () => {
                         </SliderInfoItemWrap>
                         <SliderInfoItemWrap>
                             <SliderInfoItem>
-                                <SliderInfoImg src={require('../../images/erver.svg').default} />
+                                <SliderInfoImg loading='lazy' src={require('../../images/erver.svg').default} />
                                 <SliderInfoTextWrap>
                                     <SliderInfoData>
                                         12+

@@ -15,7 +15,7 @@ const Product = ({ id, image, title, description, category, rating, price }) => 
     <div id={`product-${id}`} onClick={handleClick} className="product-container">
       <div className="product-wrapper">
         <div className="product-img--wrapper">
-          <img src={image} />
+          <img src={image} loading='lazy' alt="product" />
         </div>
         <div className="product-info--wrapper">
           <div className="product-title--wrapper">

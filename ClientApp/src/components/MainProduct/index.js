@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useState, useEffect, useReducer, createContext, useRef } from 'react'
 import { Container, Row, Col } from 'react-grid-system';
 import { IoCartSharp } from 'react-icons/io5'
-import {Link} from 'react-router-dom'
+import { BsBoxArrowRight } from 'react-icons/bs'
 
 // Internal Import
 import './MainProductStyle.css'
@@ -47,15 +47,22 @@ const reducerCart = (state, action) => {
     case 'DELETE_FROM_CART':
       alert('Deleted from cart!', state)
       break;
+    case 'CLEAR_CART': {
+      return {
+        cart: [],
+        product: {},
+        quantity: 0
+      }
+    }
     default:
       alert('NOTHING HAPPEN!')
   }
 }
 
 const MainProduct = (props) => {
-  const [cart, dispatchAction] = useReducer(reducerCart, initialState);
+  const [cart, dispatchAction] = useReducer(reducerCart, initialState)
   const [data, setData] = useState([])
-  const [toolbarMode, setToolbarMode] = useState('default');
+  const [toolbarMode, setToolbarMode] = useState('default')
   const dataApiProduct = 'https://fakestoreapi.com/products'
 
   // Manage Refs 
@@ -64,7 +71,8 @@ const MainProduct = (props) => {
   const bestSellingElement = useRef();
   const increaseElement = useRef();
   const descreaseElement = useRef();
-
+  const toggleStorage = useRef();
+  const layerStorage = useRef();
   useEffect(() => {
     axios.get(dataApiProduct)
       .then(res => {
@@ -150,6 +158,27 @@ const MainProduct = (props) => {
     event.target.classList.add('active-toolbar')
   }
 
+  const handleCheckCart = () => {
+    toggleStorage.current.classList.add('appear')
+    layerStorage.current.classList.add('render')
+  }
+
+  const handleCloseStorage = () => {
+    toggleStorage.current.classList.remove('appear')
+    layerStorage.current.classList.remove('render')
+  }
+
+  const handleBuyNow = () => {
+    handleCloseStorage()
+    if (cart.cart.length == 0) {
+      alert('Your cart is empty!')
+    } else {
+      dispatchAction({
+        type:'CLEAR_CART'
+      })
+      alert('Buy Successed!')
+    }
+  }
   return (
     <CartContext.Provider value={handleAddToCart}>
       <div className="mainProduct">
@@ -183,10 +212,34 @@ const MainProduct = (props) => {
                   />
                 )
               })}
-              {cart.cart.length == 0 ? <EmptyCart/> : ''}
-              <div className="check-cart--wrapper">
-                <Link to="/cart" className="check-cart--btn">Check Your Cart</Link>
+              {cart.cart.length == 0 ? <EmptyCart /> : ''}
+              <div className="check-cart--wrapper" onClick={handleCheckCart}>
+                <div className="check-cart--btn">Check Your Cart</div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div ref={layerStorage} className="storage-layer" onClick={handleCloseStorage}>
+        </div>
+        <div ref={toggleStorage} className="storage-container">
+          <div className="storage-wrapper">
+            <div className="storage__title--wrapper">
+              <div className="storage__title">Storage</div>
+              <BsBoxArrowRight className="storage__toggle" onClick={handleCloseStorage} />
+            </div>
+            {cart.cart.map((item, index) => {
+              return (
+                <StorageProduct
+                  key={index}
+                  {...item}
+                />
+              )
+            })}
+            {cart.cart.length == 0 ? <EmptyCart /> : ''}
+          </div>
+          <div className="storage__buy--wrapper">
+            <div className="storage__buy" onClick={handleBuyNow}>
+              {cart.cart.length == 0 ? 'Nothing To Buy' : 'Buy Now'}
             </div>
           </div>
         </div>

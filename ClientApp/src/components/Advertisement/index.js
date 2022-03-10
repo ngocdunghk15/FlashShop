@@ -26,7 +26,7 @@ const Advertisement = () => {
                 </AdsPara>
                 <AdsListImg>
                     <AdsItemWrapper>
-                        <AdsImg src={require('../../images/ads-red.svg').default} />
+                        <AdsImg loading='lazy' src={require('../../images/ads-red.svg').default} />
                         <AdsItemWrapText>
                             <AdsItemTitle light>
                                 Incentives+
@@ -37,7 +37,7 @@ const Advertisement = () => {
                         </AdsItemWrapText>
                     </AdsItemWrapper>
                     <AdsItemWrapper>
-                        <AdsImg src={require('../../images/ads-white.svg').default} />
+                        <AdsImg loading='lazy' src={require('../../images/ads-white.svg').default} />
                         <AdsItemWrapText>
                             <AdsItemTitle dark>
                                 Transport+
@@ -49,7 +49,7 @@ const Advertisement = () => {
                     </AdsItemWrapper>
                 </AdsListImg>
                 <AdsSponsorsWrapper>
-                    <AdsSponsorsImg src={require('../../images/sponsored.svg').default} />
+                    <AdsSponsorsImg loading='lazy' src={require('../../images/sponsored.svg').default} />
                 </AdsSponsorsWrapper>
             </AdsWrapper>
         </AdsContainer>

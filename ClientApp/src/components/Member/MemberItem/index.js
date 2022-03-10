@@ -18,7 +18,7 @@ const MemberItem = ({ colorTheme, imgPath, typeMember, incentiveArray, minPoint 
     <MemberContainer colorTheme={colorTheme}>
       <MemberWrapper>
         <MemberImgWrap>
-          <MemberImg src={imgPath} />
+          <MemberImg loading='lazy' src={imgPath} />
         </MemberImgWrap>
         <MemberTitle>
           {`${typeMember} Member`}
@@ -26,7 +26,7 @@ const MemberItem = ({ colorTheme, imgPath, typeMember, incentiveArray, minPoint 
         <MemberListIncentives>
           {incentiveArray && incentiveArray.map((member,index) => {
             return (<MemberItemIncentives key={index}>
-              <MemberCheck src={require('../../../images/check-no-circle.svg').default} />
+              <MemberCheck loading='lazy' src={require('../../../images/check-no-circle.svg').default} />
               <MemberIncentives>
                 {member}
               </MemberIncentives>

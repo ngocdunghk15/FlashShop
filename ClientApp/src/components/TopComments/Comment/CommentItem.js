@@ -20,7 +20,7 @@ const CommentItem = ({ userAvatar, userSex, userName, userCountry, userRate, use
             <CommentWrapper>
                 <CommentInfo>
                     <CommentInfoLeft>
-                        <CommentUserAvatar src={userAvatar} />
+                        <CommentUserAvatar loading='lazy' src={userAvatar} />
                         <CommentUserInfo>
                             <CommentUserName>
                                 {userName}
@@ -32,7 +32,7 @@ const CommentItem = ({ userAvatar, userSex, userName, userCountry, userRate, use
                     </CommentInfoLeft>
                     <CommentInfoRate>
                         {userRate}
-                        <CommentRateIcon src={require('../../../images/rate-icon.svg').default} />
+                        <CommentRateIcon loading='lazy' src={require('../../../images/rate-icon.svg').default} />
                     </CommentInfoRate>
                 </CommentInfo>
                 <CommentContent>
