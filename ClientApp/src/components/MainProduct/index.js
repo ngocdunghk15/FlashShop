@@ -62,6 +62,7 @@ const reducerCart = (state, action) => {
 const MainProduct = (props) => {
   const [cart, dispatchAction] = useReducer(reducerCart, initialState)
   const [data, setData] = useState([])
+  const [totalPrice, setTotalPrice] = useState(0)
   const [toolbarMode, setToolbarMode] = useState('default')
   const dataApiProduct = 'https://fakestoreapi.com/products'
 
@@ -174,11 +175,18 @@ const MainProduct = (props) => {
       alert('Your cart is empty!')
     } else {
       dispatchAction({
-        type:'CLEAR_CART'
+        type: 'CLEAR_CART'
       })
       alert('Buy Successed!')
     }
   }
+
+  useEffect(() => {
+    const total = cart.cart.reduce((prevValue, currentValue) => {
+      return prevValue + (currentValue.price * currentValue.quantity);
+    }, 0)
+    setTotalPrice(total)
+  }, [cart])
   return (
     <CartContext.Provider value={handleAddToCart}>
       <div className="mainProduct">
@@ -238,6 +246,7 @@ const MainProduct = (props) => {
             {cart.cart.length == 0 ? <EmptyCart /> : ''}
           </div>
           <div className="storage__buy--wrapper">
+            <div className="storage__total">{`Total: $${totalPrice}`}</div>
             <div className="storage__buy" onClick={handleBuyNow}>
               {cart.cart.length == 0 ? 'Nothing To Buy' : 'Buy Now'}
             </div>
