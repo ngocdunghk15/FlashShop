@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/FlashShop/static/css/main.bd82de19.chunk.css",
-    "main.js": "/FlashShop/static/js/main.5adbf62a.chunk.js",
-    "main.js.map": "/FlashShop/static/js/main.5adbf62a.chunk.js.map",
+    "main.css": "/FlashShop/static/css/main.f1614215.chunk.css",
+    "main.js": "/FlashShop/static/js/main.0878516c.chunk.js",
+    "main.js.map": "/FlashShop/static/js/main.0878516c.chunk.js.map",
     "runtime-main.js": "/FlashShop/static/js/runtime-main.96cbf0fb.js",
     "runtime-main.js.map": "/FlashShop/static/js/runtime-main.96cbf0fb.js.map",
     "static/css/2.459240e5.chunk.css": "/FlashShop/static/css/2.459240e5.chunk.css",
-    "static/js/2.43816eb4.chunk.js": "/FlashShop/static/js/2.43816eb4.chunk.js",
-    "static/js/2.43816eb4.chunk.js.map": "/FlashShop/static/js/2.43816eb4.chunk.js.map",
+    "static/js/2.420164ed.chunk.js": "/FlashShop/static/js/2.420164ed.chunk.js",
+    "static/js/2.420164ed.chunk.js.map": "/FlashShop/static/js/2.420164ed.chunk.js.map",
     "static/js/3.46b9f695.chunk.js": "/FlashShop/static/js/3.46b9f695.chunk.js",
     "static/js/3.46b9f695.chunk.js.map": "/FlashShop/static/js/3.46b9f695.chunk.js.map",
     "index.html": "/FlashShop/index.html",
     "service-worker.js": "/FlashShop/service-worker.js",
     "service-worker.js.map": "/FlashShop/service-worker.js.map",
     "static/css/2.459240e5.chunk.css.map": "/FlashShop/static/css/2.459240e5.chunk.css.map",
-    "static/css/main.bd82de19.chunk.css.map": "/FlashShop/static/css/main.bd82de19.chunk.css.map",
-    "static/js/2.43816eb4.chunk.js.LICENSE.txt": "/FlashShop/static/js/2.43816eb4.chunk.js.LICENSE.txt",
+    "static/css/main.f1614215.chunk.css.map": "/FlashShop/static/css/main.f1614215.chunk.css.map",
+    "static/js/2.420164ed.chunk.js.LICENSE.txt": "/FlashShop/static/js/2.420164ed.chunk.js.LICENSE.txt",
     "static/media/ads-red.svg": "/FlashShop/static/media/ads-red.cba05583.svg",
     "static/media/ads-white.svg": "/FlashShop/static/media/ads-white.cd0603b8.svg",
     "static/media/brand-logo.png": "/FlashShop/static/media/brand-logo.f75b4672.png",
@@ -38,8 +38,8 @@
   "entrypoints": [
     "static/js/runtime-main.96cbf0fb.js",
     "static/css/2.459240e5.chunk.css",
-    "static/js/2.43816eb4.chunk.js",
-    "static/css/main.bd82de19.chunk.css",
-    "static/js/main.5adbf62a.chunk.js"
+    "static/js/2.420164ed.chunk.js",
+    "static/css/main.f1614215.chunk.css",
+    "static/js/main.0878516c.chunk.js"
   ]
 }
