@@ -1,7 +1,8 @@
 import React from 'react'
+import './signinstyle.css'
 import FacebookLogin from 'react-facebook-login';
 import { useState } from 'react'
-const SignIn = ({handleChangeUserName}) => {
+const SignIn = ({ handleChangeUserName }) => {
   const [user, setUser] = useState('')
   const responseFacebook = (response) => {
     setUser(response.name)
@@ -9,7 +10,7 @@ const SignIn = ({handleChangeUserName}) => {
   }
   return (
     <div className="sign-in--container">
-      <FacebookLogin
+      <FacebookLogin className="facebook-login"
         appId="1468927633504164"
         autoLoad={false}
         fields="name,email,picture"

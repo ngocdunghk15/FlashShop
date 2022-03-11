@@ -8,7 +8,6 @@ import { BsBoxArrowRight } from 'react-icons/bs'
 // Internal Import
 import './MainProductStyle.css'
 import Product from '../Product';
-import { cartOnHover, cartOutHover } from './HandleEvent';
 import StorageProduct from './StorageProduct/StorageProduct'
 import EmptyCart from './EmptyCart/EmptyCart';
 
@@ -27,6 +26,13 @@ const initialState = {
 
 const reducerCart = (state, action) => {
   switch (action.type) {
+    case 'GET_DATA': {
+      return {
+        cart: [...action.product],
+        product: {},
+        quantity: 0
+      }
+    }
     case 'ADD_TO_CART':
       {
         alert(`Added ${action.quantity} ${action.product.title} to cart!`)
@@ -91,6 +97,18 @@ const MainProduct = (props) => {
       .catch(err => alert(err))
   }, [])
 
+  useEffect(() => {
+    axios.get('http://localhost:3001/cart')
+      .then(res => {
+        dispatchAction({
+          type: 'GET_DATA',
+          product: res.data[0].data.cart,
+          quantity: 0
+        })
+      })
+      .catch(err => alert(err))
+  }, [])
+
   // Filter Data
   let filterData = data.filter((item) => {
     return (props.products.includes(item.category))
@@ -142,14 +160,25 @@ const MainProduct = (props) => {
   // Function Handle
   // Method add to cart
   const handleAddToCart = (product, quantity) => {
-    console.log(props.userName)
     axios({
       method: 'put',
-      url: 'http://localhost:3001/test/1',
+      url: 'http://localhost:3001/cart/1',
       data: {
         user: props.userName,
         data: {
-          cart: cart.cart
+          cart: [...cart.cart, {
+            ...product,
+            'date': new Date().toLocaleDateString('vi-GB', {
+              hour: 'numeric',
+              minute: 'numeric',
+              second: 'numeric',
+              day: 'numeric',
+              month: 'short',
+              year: 'numeric'
+            }),
+            'quantity': quantity
+          }
+          ]
         }
       }
     });
@@ -161,13 +190,16 @@ const MainProduct = (props) => {
   }
 
   const handleRemoveFromCart = (product, quantity) => {
+    let tempArray = cart.cart.filter((item) => {
+      return item.date != product.date
+    })
     axios({
       method: 'put',
-      url: 'http://localhost:3001/test/1',
+      url: 'http://localhost:3001/cart/1',
       data: {
         user: props.userName,
         data: {
-          cart: cart.cart
+          cart: [...tempArray]
         }
       }
     });
@@ -208,6 +240,16 @@ const MainProduct = (props) => {
   }
 
   const handleBuyNow = () => {
+    axios({
+      method: 'put',
+      url: 'http://localhost:3001/cart/1',
+      data: {
+        user: props.userName,
+        data: {
+          cart: []
+        }
+      }
+    });
     handleCloseStorage()
     if (cart.cart.length == 0) {
       alert('Your cart is empty!')
@@ -225,6 +267,7 @@ const MainProduct = (props) => {
     }, 0)
     setTotalPrice(total)
   }, [cart])
+
   return (
     <CartContext.Provider value={handleAddToCart}>
       <RemoveContext.Provider value={handleRemoveFromCart}>
