@@ -8,11 +8,13 @@ import {
   BrandText,
   SignInBtn,
   SignInWrap,
-  SearchWrap,
-  InputSearch,
   FanpageWrap,
   FanpageLink,
   NavServices,
+  UserAvatar,
+  UserName,
+  UserInfoContainer,
+
 } from './NavMenuElements';
 
 export class NavMenu extends Component {
@@ -21,7 +23,6 @@ export class NavMenu extends Component {
 
   constructor(props) {
     super(props);
-
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
       collapsed: true
@@ -37,7 +38,7 @@ export class NavMenu extends Component {
   render() {
     return (
       <header className="header">
-        <Navbar className="navbar-expand-sm navbar-toggleable-sm " light>
+        <Navbar className="navbar-expand-sm navbar-toggleable-sm" light>
           <Container>
             <NavbarBrand tag={Link} to="/">
               <LogoBrandWrap>
@@ -85,20 +86,22 @@ export class NavMenu extends Component {
                     }
                   }} className="text-dark" to="member" smooth={true} duration={1000} spy={true} exact='true' offset={-91}>Member</NavServices>
                 </NavItem>
-                <SignInWrap className="none-list-style" onClick={() => {
-                  if (window.outerWidth <= "591") {
-                    this.toggleNavbar()
-                  }
-                }}>
-                  <SignInBtn className="trim-text" to="/signin">Sign In</SignInBtn>
-                </SignInWrap>
+                {this.props.userName != '' ? '' :
+                  <SignInWrap className="none-list-style" onClick={() => {
+                    if (window.outerWidth <= "591") {
+                      this.toggleNavbar()
+                    }
+                  }}>
+                    <SignInBtn className="trim-text" to="/signin">Login</SignInBtn>
+                  </SignInWrap>}
               </ul>
             </Collapse>
-            <SearchWrap>
-              <InputSearch placeholder="Search..." />
-            </SearchWrap>
           </Container>
         </Navbar>
+        {this.props.userName == '' ? '' : <UserInfoContainer>
+                <UserAvatar src={require('../../images/profile-avatar.svg').default} />
+                <UserName>{`${this.props.userName}`}</UserName>
+              </UserInfoContainer>}
       </header>
     );
   }

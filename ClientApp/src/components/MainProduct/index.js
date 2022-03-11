@@ -15,6 +15,7 @@ import EmptyCart from './EmptyCart/EmptyCart';
 // Create Context
 
 export const CartContext = createContext()
+export const RemoveContext = createContext()
 
 // Manage Cart
 
@@ -45,8 +46,16 @@ const reducerCart = (state, action) => {
         }
       }
     case 'DELETE_FROM_CART':
-      alert('Deleted from cart!', state)
-      break;
+      {
+        let tempArray = state.cart.filter((item) => {
+          return item.date != action.product.date
+        })
+        return {
+          cart: [...tempArray],
+          product: {},
+          quantity: 0
+        }
+      }
     case 'CLEAR_CART': {
       return {
         cart: [],
@@ -64,7 +73,7 @@ const MainProduct = (props) => {
   const [data, setData] = useState([])
   const [totalPrice, setTotalPrice] = useState(0)
   const [toolbarMode, setToolbarMode] = useState('default')
-  const dataApiProduct = 'https://fakestoreapi.com/products'
+  const dataApiProduct = 'http://localhost:44465/products'
 
   // Manage Refs 
   const defaultElement = useRef();
@@ -140,6 +149,14 @@ const MainProduct = (props) => {
     })
   }
 
+  const handleRemoveFromCart = (product, quantity) => {
+    dispatchAction({
+      type: 'DELETE_FROM_CART',
+      product: { ...product },
+      quantity: quantity
+    })
+  }
+
   // Clear Toolbar
 
   const clearToolbar = (element) => {
@@ -189,29 +206,53 @@ const MainProduct = (props) => {
   }, [cart])
   return (
     <CartContext.Provider value={handleAddToCart}>
-      <div className="mainProduct">
-        <div className="main-product__toolbar">
-          <div className="toolbar-left--wrapper">
-            <div ref={defaultElement} data-type="default" className="toolbar__default toolbar-btn active-toolbar" onClick={handleToolbar}>
-              Default
+      <RemoveContext.Provider value={handleRemoveFromCart}>
+        <div className="mainProduct">
+          <div className="main-product__toolbar">
+            <div className="toolbar-left--wrapper">
+              <div ref={defaultElement} data-type="default" className="toolbar__default toolbar-btn active-toolbar" onClick={handleToolbar}>
+                Default
+              </div>
+              <div ref={ratingElement} data-type="rating" className="toolbar__like toolbar-btn" onClick={handleToolbar}>
+                Rating
+              </div>
+              <div ref={bestSellingElement} data-type="best-selling" className="toolbar__sold toolbar-btn" onClick={handleToolbar}>
+                Best-Selling
+              </div>
+              <div ref={increaseElement} data-type="increase-price" className="toolbar__increase toolbar-btn" onClick={handleToolbar}>
+                Increase Price
+              </div>
+              <div ref={descreaseElement} data-type="descrease-price" className="toolbar__descrease toolbar-btn" onClick={handleToolbar}>
+                Descrease Price
+              </div>
             </div>
-            <div ref={ratingElement} data-type="rating" className="toolbar__like toolbar-btn" onClick={handleToolbar}>
-              Rating
-            </div>
-            <div ref={bestSellingElement} data-type="best-selling" className="toolbar__sold toolbar-btn" onClick={handleToolbar}>
-              Best-Selling
-            </div>
-            <div ref={increaseElement} data-type="increase-price" className="toolbar__increase toolbar-btn" onClick={handleToolbar}>
-              Increase Price
-            </div>
-            <div ref={descreaseElement} data-type="descrease-price" className="toolbar__descrease toolbar-btn" onClick={handleToolbar}>
-              Descrease Price
+            <div className="toolbar-right--wrapper">
+              <IoCartSharp className="toolbar__cart" />
+              <div className="cart-storage--wrapper">
+                <h4 className="cart-storage__title">Recent Products</h4>
+                {cart.cart.map((item, index) => {
+                  return (
+                    <StorageProduct
+                      key={index}
+                      {...item}
+                    />
+                  )
+                })}
+                {cart.cart.length == 0 ? <EmptyCart /> : ''}
+                <div className="check-cart--wrapper" onClick={handleCheckCart}>
+                  <div className="check-cart--btn">Check Your Cart</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="toolbar-right--wrapper">
-            <IoCartSharp className="toolbar__cart" />
-            <div className="cart-storage--wrapper">
-              <h4 className="cart-storage__title">Recent Products</h4>
+          <div ref={layerStorage} className="storage-layer" onClick={handleCloseStorage}>
+          </div>
+          <div ref={toggleStorage} className="storage-container">
+            <div className="storage-wrapper">
+              <div className="storage__title--wrapper">
+                <div className="storage__title">Storage</div>
+                <BsBoxArrowRight className="storage__toggle" onClick={handleCloseStorage} />
+              </div>
               {cart.cart.map((item, index) => {
                 return (
                   <StorageProduct
@@ -221,60 +262,38 @@ const MainProduct = (props) => {
                 )
               })}
               {cart.cart.length == 0 ? <EmptyCart /> : ''}
-              <div className="check-cart--wrapper" onClick={handleCheckCart}>
-                <div className="check-cart--btn">Check Your Cart</div>
+            </div>
+            <div className="storage__buy--wrapper">
+              <div className="storage__total">{`Total: $${totalPrice}`}</div>
+              <div className="storage__buy" onClick={handleBuyNow}>
+                {cart.cart.length == 0 ? 'Nothing To Buy' : 'Buy Now'}
               </div>
             </div>
           </div>
-        </div>
-        <div ref={layerStorage} className="storage-layer" onClick={handleCloseStorage}>
-        </div>
-        <div ref={toggleStorage} className="storage-container">
-          <div className="storage-wrapper">
-            <div className="storage__title--wrapper">
-              <div className="storage__title">Storage</div>
-              <BsBoxArrowRight className="storage__toggle" onClick={handleCloseStorage} />
-            </div>
-            {cart.cart.map((item, index) => {
-              return (
-                <StorageProduct
-                  key={index}
-                  {...item}
-                />
-              )
-            })}
-            {cart.cart.length == 0 ? <EmptyCart /> : ''}
-          </div>
-          <div className="storage__buy--wrapper">
-            <div className="storage__total">{`Total: $${totalPrice}`}</div>
-            <div className="storage__buy" onClick={handleBuyNow}>
-              {cart.cart.length == 0 ? 'Nothing To Buy' : 'Buy Now'}
-            </div>
-          </div>
-        </div>
-        <Container>
-          <Row>
-            {
-              filterData.map((item, index) => {
-                return (
-                  <Col
-                    className="product-col"
-                    key={index}
-                    lg={4}
-                    md={6}
-                    sm={12}
-                    xl={3}
-                  >
-                    <Product
-                      {...item}
-                    />
-                  </Col>
-                )
-              })
-            }
-          </Row>
-        </Container>
-      </div >
+          <Container>
+            <Row>
+              {
+                filterData.map((item, index) => {
+                  return (
+                    <Col
+                      className="product-col"
+                      key={index}
+                      lg={4}
+                      md={6}
+                      sm={12}
+                      xl={3}
+                    >
+                      <Product
+                        {...item}
+                      />
+                    </Col>
+                  )
+                })
+              }
+            </Row>
+          </Container>
+        </div >
+      </RemoveContext.Provider>
     </CartContext.Provider>
   )
 }

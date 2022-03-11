@@ -45,6 +45,11 @@ html {
   min-width: 60%;
   display: flex;
   align-items: center;
+  margin-left:0;
+}
+
+.over-nav{
+  over-flow:hidden;
 }
 
 .nav-item {

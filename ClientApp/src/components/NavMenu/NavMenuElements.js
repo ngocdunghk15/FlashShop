@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
-import { Link as LinkS} from 'react-scroll'
+import { Link as LinkS } from 'react-scroll'
 export const LogoBrandWrap = styled.div`
     display:flex;
     align-items:center;
@@ -62,7 +62,7 @@ export const SignInWrap = styled.div`
     justify-content: center;
     align-items: center;
     border-radius:50px;
-    margin-left: 24px;
+    margin-left: auto;
     box-shadow: inset 0px 0px 6px 1px #DCB9B9;
     @media screen and (max-width:768px){
         margin-left: 12px;
@@ -81,23 +81,6 @@ export const SignInWrap = styled.div`
 
     
 `
-
-export const SearchWrap = styled.div`
-    display:flex;
-    margin-left:4px;
-    @media screen and (max-width:992px) {
-        display:none;
-    }
-`
-
-export const InputSearch = styled.input`
-    border-radius:50px;
-    border:#ccc 1px solid;
-    padding:4px 8px;
-    outline:none;
-    color:#747474;
-`
-
 export const FanpageWrap = styled.div`
     line-height: 35px;
 `
@@ -116,4 +99,28 @@ export const NavServices = styled(LinkS)`
     cursor: pointer;
     display:block;
     padding:8px;
+`
+
+export const UserInfoContainer = styled.div`
+    min-width:96px;
+    height:40px;
+    display:flex;
+    align-items: center;
+    position: fixed;
+    right:92px;
+    top:25px;
+    @media screen and (max-width:1100px){
+        display:none;
+    }
+`
+
+export const UserAvatar = styled.img`
+    width:45px;
+    height:45px;
+`
+
+export const UserName = styled.span`
+    font-size:14px;
+    color:#333;
+    margin-left:8px;
 `

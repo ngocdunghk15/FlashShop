@@ -127,6 +127,7 @@
   line-height: 24px;
   min-height: 96px;
   height: auto;
+  overflow: hidden;
 }
 
 .show-up__description span {
