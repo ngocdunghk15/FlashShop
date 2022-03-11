@@ -108,14 +108,14 @@ const MainProduct = (props) => {
       case 'rating':
         filterData.sort(
           function (prev, next) {
-            return next.rating.rate - prev.rating.rate;
+            return next.rate - prev.rate;
           }
         )
         break;
       case 'best-selling':
         filterData.sort(
           function (prev, next) {
-            return next.rating.count - prev.rating.count;
+            return next.count - prev.count;
           }
         )
         break;
@@ -142,6 +142,17 @@ const MainProduct = (props) => {
   // Function Handle
   // Method add to cart
   const handleAddToCart = (product, quantity) => {
+    console.log(props.userName)
+    axios({
+      method: 'put',
+      url: 'http://localhost:3001/test/1',
+      data: {
+        user: props.userName,
+        data: {
+          cart: cart.cart
+        }
+      }
+    });
     dispatchAction({
       type: 'ADD_TO_CART',
       product: { ...product },
@@ -150,6 +161,16 @@ const MainProduct = (props) => {
   }
 
   const handleRemoveFromCart = (product, quantity) => {
+    axios({
+      method: 'put',
+      url: 'http://localhost:3001/test/1',
+      data: {
+        user: props.userName,
+        data: {
+          cart: cart.cart
+        }
+      }
+    });
     dispatchAction({
       type: 'DELETE_FROM_CART',
       product: { ...product },

@@ -9,8 +9,8 @@ import { useState, useContext } from 'react'
 import './ProductShowUpStyle.css'
 import { CartContext } from '../../MainProduct/index'
 
-const ProductShowUp = ({ id, image, title, description, category, rating, price, handleClick }) => {
-    const productInfo = { id, image, title, description, category, rating, price }
+const ProductShowUp = ({ id, image, title, description, category, rate,count, price, handleClick }) => {
+    const productInfo = { id, image, title, description, category, rate,count, price }
     const handleAddToCart = useContext(CartContext)
     function productClick(e) {
         e.stopPropagation()
@@ -58,11 +58,11 @@ const ProductShowUp = ({ id, image, title, description, category, rating, price,
                     </div>
                     <div className="show-up__rateCount">
                         <div className="show-up__rate">
-                            <span>{rating.rate}</span>
+                            <span>{rate}</span>
                             <img src={require('../../../images/rate-icon.svg').default} />
                         </div>
                         <div className="show-up__count">
-                            <span><strong>Sold</strong>{` ${rating.count} products`}</span>
+                            <span><strong>Sold</strong>{` ${count} products`}</span>
                         </div>
                     </div>
                     <div className="show-up-price--wrapper">

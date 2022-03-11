@@ -3,9 +3,9 @@ import { FcShipped } from 'react-icons/fc'
 import { useState } from 'react'
 import './ProductStyle.css'
 import ProductShowUp from './ProductShowUp/ProductShowUp'
-const Product = ({ id, image, title, description, category, rating, price }) => {
+const Product = ({ id, image, title, description, category, rate, count, price }) => {
   const productID = `product-${id}`
-  const dataResponse = { id, image, title, description, category, rating, price }
+  const dataResponse = { id, image, title, description, category, rate, count, price }
   const handleClick = (e) => {
     setShowUp(prevState => !prevState)
   }
@@ -28,10 +28,10 @@ const Product = ({ id, image, title, description, category, rating, price }) => 
             </div>
             <div className="product-rate--wrapper">
               <span className="product-rate">
-                {rating.rate}
+                {rate}
                 <img src={require('../../images/rate-icon.svg').default} />
               </span>
-              <span className="product-count">{`Sold ${rating.count}`}</span>
+              <span className="product-count">{`Sold ${count}`}</span>
             </div>
           </div>
         </div>

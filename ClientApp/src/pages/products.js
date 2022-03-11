@@ -4,7 +4,7 @@ import MainProduct from '../components/MainProduct'
 import { useState } from 'react'
 import ProductContainer from '../components/ProductContainer'
 
-const Products = () => {
+const Products = ({ userName }) => {
   const [categories, setCategories] = useState([])
   function handleClick(e) {
     if (e.target.checked) {
@@ -20,8 +20,8 @@ const Products = () => {
   return (
     <ProductContainer>
       <Category handleClick={handleClick} />
-      <MainProduct products={categories} />
-      
+      <MainProduct products={categories} userName={userName}/>
+
     </ProductContainer>
   )
 }
