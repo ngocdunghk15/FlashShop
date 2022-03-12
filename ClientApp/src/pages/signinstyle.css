@@ -1,11 +1,16 @@
-.sign-in--container{
-    width:100vw;
-    height:calc(100vh - 91px);
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.sign-in--container {
+  width: 100vw;
+  height: calc(100vh - 91px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.facebook-login{
-    transform: translateY(-100%) !important;
+.kep-login-facebook.metro {
+  transform: translateY(-100%);
+  border-radius: 8px !important;
+}
+
+.kep-login-facebook.metro:hover {
+    opacity: 0.8;
 }

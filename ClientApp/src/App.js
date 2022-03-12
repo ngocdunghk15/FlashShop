@@ -17,6 +17,8 @@ export default function App(){
     <Layout userName={userName}>
       <ScrollToTop
         style={{
+          right:'30px',
+          bottom:'100px',
           borderRadius: '100%',
           width: '48px',
           height: '48px',

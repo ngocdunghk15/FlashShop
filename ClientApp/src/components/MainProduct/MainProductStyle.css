@@ -171,24 +171,24 @@
 }
 
 .storage-wrapper {
-  height: 90%;
-  min-height: 90%;
+  height: 88%;
+  min-height: 88%;
   overflow-y: scroll;
 }
 
 .storage__buy--wrapper {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 10%;
+  height: 12%;
   padding-right: 32px;
 }
 
 .storage__total {
   font-size: 20px;
   font-weight: 700;
-  color:#242424d5;
+  color: #242424d5;
 }
 
 .storage__buy {
@@ -197,5 +197,29 @@
   background-color: #d0011b;
   border-radius: 4px;
   font-weight: 500;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   cursor: pointer;
+}
+
+.fixed-check-cart {
+  width: 48px;
+  height: 48px;
+  background-color: #d0011b;
+  box-shadow: 0 9px 25px 0 rgb(132 128 177 / 28%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 100%;
+  position: fixed;
+  right: 30px;
+  bottom: 160px;
+  z-index: 100;
+}
+
+.fixed-check__cart {
+  color: #fff;
+  font-size: 24px;
 }

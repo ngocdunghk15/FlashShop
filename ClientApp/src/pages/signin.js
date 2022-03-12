@@ -10,7 +10,7 @@ const SignIn = ({ handleChangeUserName }) => {
   }
   return (
     <div className="sign-in--container">
-      <FacebookLogin className="facebook-login"
+      <FacebookLogin
         appId="1468927633504164"
         autoLoad={false}
         fields="name,email,picture"

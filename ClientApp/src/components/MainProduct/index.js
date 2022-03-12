@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useState, useEffect, useReducer, createContext, useRef } from 'react'
 import { Container, Row, Col } from 'react-grid-system';
 import { IoCartSharp } from 'react-icons/io5'
-import { BsBoxArrowRight } from 'react-icons/bs'
+import { BsBoxArrowRight,BsCart4 } from 'react-icons/bs'
 
 // Internal Import
 import './MainProductStyle.css'
@@ -54,7 +54,7 @@ const reducerCart = (state, action) => {
     case 'DELETE_FROM_CART':
       {
         let tempArray = state.cart.filter((item) => {
-          return item.date != action.product.date
+          return item.date !== action.product.date
         })
         return {
           cart: [...tempArray],
@@ -191,7 +191,7 @@ const MainProduct = (props) => {
 
   const handleRemoveFromCart = (product, quantity) => {
     let tempArray = cart.cart.filter((item) => {
-      return item.date != product.date
+      return item.date !== product.date
     })
     axios({
       method: 'put',
@@ -251,7 +251,7 @@ const MainProduct = (props) => {
       }
     });
     handleCloseStorage()
-    if (cart.cart.length == 0) {
+    if (cart.cart.length === 0) {
       alert('Your cart is empty!')
     } else {
       dispatchAction({
@@ -302,7 +302,7 @@ const MainProduct = (props) => {
                     />
                   )
                 })}
-                {cart.cart.length == 0 ? <EmptyCart /> : ''}
+                {cart.cart.length === 0 ? <EmptyCart /> : ''}
                 <div className="check-cart--wrapper" onClick={handleCheckCart}>
                   <div className="check-cart--btn">Check Your Cart</div>
                 </div>
@@ -325,12 +325,12 @@ const MainProduct = (props) => {
                   />
                 )
               })}
-              {cart.cart.length == 0 ? <EmptyCart /> : ''}
+              {cart.cart.length === 0 ? <EmptyCart /> : ''}
             </div>
             <div className="storage__buy--wrapper">
               <div className="storage__total">{`Total: $${totalPrice}`}</div>
               <div className="storage__buy" onClick={handleBuyNow}>
-                {cart.cart.length == 0 ? 'Nothing To Buy' : 'Buy Now'}
+                {cart.cart.length === 0 ? 'Nothing To Buy' : 'Buy Now'}
               </div>
             </div>
           </div>
@@ -356,6 +356,9 @@ const MainProduct = (props) => {
               }
             </Row>
           </Container>
+          <div className="fixed-check-cart" onClick={handleCheckCart}>
+            <BsCart4 className="fixed-check__cart" />
+          </div>
         </div >
       </RemoveContext.Provider>
     </CartContext.Provider>
